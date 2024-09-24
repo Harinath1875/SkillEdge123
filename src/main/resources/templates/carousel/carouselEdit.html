@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Carousel Record</title>    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <link rel="stylesheet" th:href="@{/css/adminNavbarFragment.css}">
+  </head>
+  <body>
+   <!-- Include the Navbar Fragment -->
+    <div th:replace="~{fragments/adminNavbarFragment :: navbar}"></div>
+    
+  <div class="container">
+<div class="col-md-8 mx-auto rounded border p-2 m-2  mt-2">
+<h2 class="text-center mb-0">Edit Carousel Record</h2>
+<form method="post" enctype="multipart/form-data" th:object="${carousellistDto}">
+
+<div class="row mb-3">
+<label class="col-sm-4 col-form-label">Id</label>
+<div class="col-sm-8">
+<input  readonly class="form-control-plaintext" th:value="${carousellist.id}">
+</div>
+</div>
+
+<div class="row mb-3">
+<label class="col-sm-4 col-form-label">Text1</label>
+<div class="col-sm-8">
+<input class="form-control" th:field="${carousellistDto.coursename}">
+<p th:if="${#fields.hasErrors('coursename')}" th:errorclass="text-danger"
+th:errors="${carousellistDto.coursename}"></p>
+</div>
+</div>
+
+<div class="row mb-3">
+<label class="col-sm-4 col-form-label">Text2</label>
+<div class="col-sm-8">
+<input class="form-control" th:field="${carousellistDto.coursedesc}">
+<p th:if="${#fields.hasErrors('coursedesc')}" th:errorclass="text-danger"
+th:errors="${carousellistDto.coursedesc}"></p>
+</div>
+</div>
+
+<div class="row mb-3">
+<label class="col-sm-4 col-form-label">Button1</label>
+<div class="col-sm-8">
+<input class="form-control" th:field="${carousellistDto.trainingBtn}">
+<p th:if="${#fields.hasErrors('trainingBtn')}" th:errorclass="text-danger"
+th:errors="${carousellistDto.trainingBtn}"></p>
+</div>
+</div>
+
+<div class="row mb-3">
+<label class="col-sm-4 col-form-label">Button2</label>
+<div class="col-sm-8">
+<input class="form-control" th:field="${carousellistDto.whyThisCourseBtn}">
+<p th:if="${#fields.hasErrors('whyThisCourseBtn')}" th:errorclass="text-danger"
+th:errors="${carousellistDto.whyThisCourseBtn}"></p>
+</div>
+</div>
+
+<div class="row mb-3">
+<div class="offset-sm-4 col-sm-8">
+<img th:src="@{'/images/' + ${carousellist.carouselImageFileName}}" alt="..." width="150">
+</div>
+</div>
+
+<div class="row mb-3">
+<label class="col-sm-4 col-form-label">Image</label>
+<div class="col-sm-8">
+<input class="form-control" type="file" th:field="${carousellistDto.carouselImageFileName}">
+<p th:if="${#fields.hasErrors('carouselImageFileName')}" th:errorclass="text-danger"
+th:errors="${carousellistDto.carouselImageFileName}"></p>
+</div>
+</div>
+
+<div class="row">
+<div class="offset-sm-4 col-sm-4 d-grid">
+<button type="submit" class="btn btn-primary">submit</button>
+</div>
+<div class="col-sm-4 d-grid">
+<a class="btn btn-outline-primary" href="/carousel" role="button">cancel</a>
+</div>
+</div>
+
+</form>
+</div>
+  
+  </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+

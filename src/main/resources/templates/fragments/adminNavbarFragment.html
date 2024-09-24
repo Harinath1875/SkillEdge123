@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skill Edge</title>    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <link rel="stylesheet" href="adminNavbarFragment.css">
+  </head>
+  <body>
+  <div th:fragment="navbar">
+    <!-- Horizontal Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- Logo on the left -->
+        <a class="navbar-brand" href="#">
+          <img src="/images/skilledge.png" alt="Logo" width="150" height="50">
+        </a>
+        <!-- Toggle button for small screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Login/Sign Up Buttons on the right -->
+          <div class="d-flex ms-auto">
+            <a class="btn btn-primary" href="/Users/userindex">Switch to User</a>
+            <a class="btn btn-primary ms-2" href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Vertical Navbar below the horizontal navbar -->
+    <div class="vertical-nav">
+      <!-- Nav Links -->
+      <a href="/carousel/display">Carousels</a>
+      <a href="/carousel/trainingcardsdispay">Training Cards</a>
+      <a href="/carousel/cousecardsdisplay">Course cards</a>
+      <a href="/carousel/businessdatadisplay">Business Data</a>
+      <a href="/carousel/ourservicesdisplay">Our Services</a>
+      <a href="/carousel/footerdisplay">Footer</a>
+
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

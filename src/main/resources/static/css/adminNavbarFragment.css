@@ -1,0 +1,64 @@
+@charset "ISO-8859-1";
+ 
+      /* Vertical Navbar */
+      .vertical-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        align-items: flex-start;
+        width: 250px;
+        background-color: #f8f9fa;
+        padding-top: 20px;
+        position: fixed;
+        left: 0;
+        top: 56px; /* Adjust to start below the horizontal navbar */
+        height: calc(100vh - 56px); /* Full viewport height minus horizontal navbar height */
+      }
+
+      /* Nav Links */
+      .vertical-nav a {
+        padding: 10px 15px; /* Adjust padding for better appearance */
+        text-decoration: none;
+        font-size: 16px;
+        color: #000;
+        display: block;
+        transition: 0.3s;
+        width: 100%;
+        text-align: left;
+      }
+
+      /* Nav Links Hover Effect */
+      .vertical-nav a:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      /* Positioning for the single button at the bottom */
+      .bottom-button-wrapper {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .bottom-button {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        text-decoration: none;
+        display: block;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .bottom-button:hover {
+        background-color: #0056b3;
+      }
+     .container
+      {
+      margin-left:250px;
+      }
+  
